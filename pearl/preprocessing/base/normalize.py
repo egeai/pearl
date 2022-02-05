@@ -3,22 +3,23 @@ from pandas import DataFrame
 
 class Uniform:
     """
-    Basic preprocessing stage which is normalization
+    Basic preprocessing stage to normalize data by uniform them.
     """
 
     def __init__(self, df: DataFrame):
         self.data_frame = df
 
-    def uniform_column_names(self):
+    def column_names(self) -> DataFrame:
         """
         Normalize the column names by
         replacing all spaces with underscores
         and all letters with lowercase letters.
         :return: normalized column names
         """
-        return self.data_frame.columns.str.lower().str.replace(' ', '_')
+        self.data_frame.columns = self.data_frame.columns.str.lower().str.replace(' ', '_')
+        return self.data_frame
 
-    def uniform_categorical_columns(self) -> DataFrame:
+    def categorical_columns(self) -> DataFrame:
         """
         The columns which are object type are assumed as categorical data.
         To uniform the content of the columns which are object type,
@@ -32,6 +33,6 @@ class Uniform:
                 ].index
         )
         for column in object_columns:
-            self.data_frame[column].str.lower().str.replace(' ', '_')
+            self.data_frame[column] = self.data_frame[column].str.lower().str.replace(' ', '_')
 
         return self.data_frame
