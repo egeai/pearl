@@ -1,0 +1,8 @@
+pandas~=1.4.0
+scikit-learn~=1.0.2
+fpdf~=1.7.2
+numpy~=1.22.1
+sympy~=1.9
+Flask~=2.0.2
+celery~=5.2.3
+streamlit~=1.5.0

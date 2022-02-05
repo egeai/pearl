@@ -1,0 +1,6 @@
+# ignore .idea
+.idea
+# ignore mypy cache
+.mypy_cache
+# ignore pytest cache
+.pytest_cache
