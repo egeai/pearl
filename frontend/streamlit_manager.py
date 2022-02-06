@@ -12,6 +12,12 @@ class StreamlitPreparation:
     def get_raw_df(self):
         return self.raw_data_frame
 
+    def shape_of_df(self):
+        return self.uniform.shape()
+
+    def columns(self):
+        return self.uniform.columns()
+
     def get_uniformed_df(self):
         return self.uniform.data_frame
 

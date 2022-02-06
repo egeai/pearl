@@ -9,6 +9,12 @@ class Uniform:
     def __init__(self, df: DataFrame):
         self.data_frame = df
 
+    def shape(self):
+        return self.data_frame.shape
+
+    def columns(self):
+        return self.data_frame.columns
+
     def column_names(self) -> DataFrame:
         """
         Normalize the column names by
