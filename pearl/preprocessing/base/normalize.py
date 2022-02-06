@@ -15,6 +15,15 @@ class Uniform:
     def columns(self):
         return self.data_frame.columns
 
+    def distribution_of_target_variable(self, target_variable):
+        return self.data_frame[target_variable].value_counts()
+
+    def distribution_of_target_variable_for_graph(self, target_variable):
+        return self.data_frame[target_variable]
+
+    def focus_on_left(self, target_variable):
+        return self.data_frame[target_variable][self.data_frame[target_variable] < 100000]
+
     def column_names(self) -> DataFrame:
         """
         Normalize the column names by

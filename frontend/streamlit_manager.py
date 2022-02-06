@@ -18,6 +18,9 @@ class StreamlitPreparation:
     def columns(self):
         return self.uniform.columns()
 
+    def target_variable_distribution(self, target_variable):
+        return self.uniform.distribution_of_target_variable(target_variable)
+
     def get_uniformed_df(self):
         return self.uniform.data_frame
 
@@ -26,6 +29,10 @@ class StreamlitPreparation:
         # initialize uniform object
         self.uniform = Uniform(self.raw_data_frame)
         return self.raw_data_frame
+
+    def get_dist_of_target_var(self, target_variable):
+        #return self.uniform.distribution_of_target_variable_for_graph(target_variable)
+        return self.uniform.focus_on_left(target_variable)
 
     def uniform_column_names(self) -> DataFrame:
         return self.uniform.column_names()

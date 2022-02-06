@@ -1,4 +1,5 @@
 import streamlit as st
+import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from streamlit_manager import *
@@ -25,9 +26,19 @@ if uploaded_file is not None:
         "What's the target variable of the dataset?",
         (sp.columns()))
 
+    st.write("###### If you sure that,", target_variable,  "is the target variable, then continue.")
+    if st.button('Continue...'):
+        st.write("###### c. See the distribution of the target variable:")
+        # st.write(sp.target_variable_distribution(target_variable))
+        st.write(sp.get_dist_of_target_var(target_variable))
 
-    # st.write("###### c. Shape of the data(rows, columns)")
-    # st.write(sp.shape_of_df())
+        # Bar Chart
+        fig, ax = plt.subplots()
+        ax.hist(sp.get_dist_of_target_var(target_variable), bins=20)
+
+        # df.msrp[df.msrp < 100000]
+        st.pyplot(fig)
+        #st.(np.histogram(sp.get_dist_of_target_var(target_variable), bins=60, range=(0, 60)))
 
     st.subheader('2. Explore and clean the data')
     st.subheader('3. Split the data into train/validation/test')
