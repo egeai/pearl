@@ -1,6 +1,7 @@
 from pandas import Series, DataFrame
+from abc import ABC, abstractmethod, abstractclassmethod
 
-
+@abstractclassmethod
 class Regressor:
     """
     A Regression class

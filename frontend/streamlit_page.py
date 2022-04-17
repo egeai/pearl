@@ -75,5 +75,27 @@ if uploaded_file is not None:
 # if st.button('Say hello, Ege'):
 #    st.subheader('')
 
+"""
+maxSub = nums[0]
+curSum = 0
+
+for n in nums:
+    if curSum < 0:
+        curSum = 0
+    curSum += n
+    maxSub = max(maxSub, curSum)
+return maxSub
+
+curSum = 0
+maxSub = nums[0]
+for num in nums:
+    if curSum < 0:
+        curSum = 0
+    curSum += num
+    maxSub = max(maxSub, curSum)
+return maxSub
+"""
+
+
 
 

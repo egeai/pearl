@@ -1,5 +1,7 @@
 from typing import Union
+# from pearl.preprocessing.base.normalize import Uniform
 from pearl.preprocessing.base.normalize import Uniform
+
 import pandas as pd
 from pandas import DataFrame
 
@@ -31,7 +33,7 @@ class StreamlitPreparation:
         return self.raw_data_frame
 
     def get_dist_of_target_var(self, target_variable):
-        #return self.uniform.distribution_of_target_variable_for_graph(target_variable)
+        # return self.uniform.distribution_of_target_variable_for_graph(target_variable)
         return self.uniform.focus_on_left(target_variable)
 
     def uniform_column_names(self) -> DataFrame:

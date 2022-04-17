@@ -1,8 +1,9 @@
 from pandas import Series, DataFrame
-from pearl.algorithms.base.regression import Regressor
+from scripts.algorithms.base.regression import Regressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
-from fpdf import FPDF # https://towardsdatascience.com/creating-pdf-files-with-python-ad3ccadfae0f
+
+
 # https://github.com/yashprakash13/data-another-day
 
 
