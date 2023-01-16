@@ -3,6 +3,8 @@ import click
 import logging
 from pathlib import Path
 from dotenv import find_dotenv, load_dotenv
+# from scripts.algorithms.base.regression import Regressor
+from scripts.algorithms.classification.random_forest import RandomForest
 
 
 @click.command()
@@ -14,6 +16,23 @@ def main(input_filepath, output_filepath):
     """
     logger = logging.getLogger(__name__)
     logger.info('making final data set from raw data')
+
+
+@click.command()
+@click.argument('input_filepath', type=click.Path(exists=True, resolve_path=True))
+@click.argument('output_filepath', type=click.Path())
+def main(input_filepath, output_filepath):
+    """ Runs data processing scripts to turn raw data from (../raw) into
+        cleaned data ready to be analyzed (saved in ../processed).
+    """
+    rf = RandomForest()
+    # regressor = Regressor()
+    # rs = regressor.best_number_of_estimator()
+
+    logger = logging.getLogger(__name__)
+    logger.info('making final data set from raw data')
+
+    logger.info('random state is' , rs)
 
 
 if __name__ == '__main__':

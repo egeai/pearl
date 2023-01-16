@@ -1,24 +1,16 @@
-.. pearl2 documentation master file, created by
-   sphinx-quickstart.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. include:: ../README.rst
+   :end-before: github-only
 
-pearl2 documentation!
-==============================================
-
-Contents:
+.. _Contributor Guide: contributing.html
+.. _Usage: usage.html
 
 .. toctree::
-   :maxdepth: 2
+   :hidden:
+   :maxdepth: 1
 
-   getting-started
-   commands
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   usage
+   reference
+   contributing
+   Code of Conduct <codeofconduct>
+   License <license>
+   Changelog <https://github.com/bertanulusoy/pearl/releases>
